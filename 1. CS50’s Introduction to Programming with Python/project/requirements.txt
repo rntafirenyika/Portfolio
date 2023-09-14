@@ -1,0 +1,7 @@
+googlemaps
+simplejson
+pandas
+lxml
+tabulate
+fpdf2
+#--upgrade google-auth-oauthlib
