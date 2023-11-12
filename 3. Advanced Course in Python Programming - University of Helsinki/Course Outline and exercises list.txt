@@ -1,0 +1,144 @@
+Part 8
+Objects and methods
+1. Programming exercise: The smallest average result
+2. Programming exercise: Row sums
+Classes and objects
+1. Programming exercise: List of years
+2. Programming exercise: Shopping list
+Defining classes
+1. Programming exercise: Book
+2. Programming exercise: Three classes
+3. Programming exercise: Define class: Pet
+4. Programming exercise: The older book
+5. Programming exercise: Books of a genre
+Defining methods
+1. Programming exercise: Decreasing counter
+2. Programming exercise: First and last name
+3. Programming exercise: Statistics on numbers
+More examples of classes
+1. Programming exercise: Stopwatch
+2. Programming exercise: Clock
+3. Programming exercise: LunchCard
+4. Programming exercise: Series
+5. Quiz: Feedback, part 8
+
+Part 9
+Objects and references
+1. Programming exercise: The fastest car
+2. Programming exercise: Passing submissions
+3. Programming exercise: Baby Centre
+4. Programming exercise: LunchCard and PaymentTerminal
+5. Programming exercise: Comparing properties
+Objects as attributes
+1. Programming exercise: Pets
+2. Programming exercise: A box of presents
+3. Programming exercise: The shortest person in the room
+Encapsulation
+1. Programming exercise: Car
+2. Programming exercise: Recording
+3. Programming exercise: Weather station
+Scope of methods
+1. Programming exercise: Service charge
+Class attributes
+1. Programming exercise: Postcodes
+2. Programming exercise: List helper
+More examples with classes
+1. Programming exercise: Item, Suitcase and Cargo hold
+2. Quiz: Feedback, part 9
+
+Part 10
+Class hierarchies
+1. Programming exercise: Laptop computer
+2. Programming exercise: Game Museum
+3. Programming exercise: Areas
+4. Programming exercise: Word game
+Access modifiers
+1. Programming exercise: Supergroup
+2. Programming exercise: Secret magic potion
+Object oriented programming techniques
+1. Programming exercise: Money
+2. Programming exercise: Simple date
+3. Programming exercise: An iterable shopping list
+Developing a larger application
+1. Programming exercise: Phone book expansion, version 1
+2. Programming exercise: Phone book expansion, version 2
+3. Programming exercise: CourseRecords
+4. Quiz: Feedback, part 10
+
+Part 11
+List comprehensions
+1. Programming exercise: Square roots
+2. Programming exercise: Rows of stars
+3. Programming exercise: Best exam result
+4. Programming exercise: Lengths
+5. Programming exercise: Remove smaller than
+6. Programming exercise: Begin with a vowel
+7. Programming exercise: Lottery numbers
+More comprehensions
+1. Programming exercise: Filter forbidden
+2. Programming exercise: Products in shopping list
+3. Programming exercise: Price difference of cheaper properties
+4. Programming exercise: Lengths of strings
+5. Programming exercise: Most common words
+Recursion
+1. Programming exercise: Add numbers to a list
+2. Programming exercise: Recursive sum
+3. Programming exercise: Balance all the brackets
+More recursion examples
+1. Programming exercise: Greatest node
+2. Programming exercise: Bosses and subordinates
+3. Programming exercise: OrderBook
+4. Programming exercise: Order book application
+5. Quiz: Feedback, part 11
+
+Part 12
+Functions as arguments
+1. Programming exercise: Sort by remaining stock
+2. Programming exercise: Sort by number of seasons
+3. Programming exercise: Sort by ratings
+4. Programming exercise: ClimbingRoute
+5. Programming exercise: Climbing areas
+6. Programming exercise: BallPlayers
+7. Programming exercise: Product search
+Generators
+1. Programming exercise: Even numbers
+2. Programming exercise: Prime numbers
+3. Programming exercise: Random words
+Functional programming
+1. Programming exercise: Attempted courses
+2. Programming exercise: Filtering attempts
+3. Programming exercise: Study credits
+Regular expressions
+1. Programming exercise: Regular expressions
+2. Programming exercise: Hockey statistics
+3. Quiz: Feedback, part 12
+
+Part 13
+Pygame
+1. Programming exercise: Four robots
+2. Programming exercise: Robots in a row
+3. Programming exercise: A hundred robots
+4. Programming exercise: Random robots
+Animation
+1. Programming exercise: Vertical movement
+2. Programming exercise: Round the perimeter
+3. Programming exercise: Two robots
+4. Programming exercise: Robots in a circle
+5. Programming exercise: Bouncing ball
+6. Programming exercise: Robot invasion
+Events
+1. Programming exercise: Four directions
+2. Programming exercise: Four walls
+3. Programming exercise: Two players
+4. Programming exercise: Robot and mouse
+5. Programming exercise: The location of the robot
+More pygame techniques
+1. Programming exercise: Clock
+2. Programming exercise: Asteroids
+3. Quiz: Feedback, part 13
+
+Part 14
+Your own game
+1. Quiz: Own game
+2. Quiz: Feedback, part 14
+3. Quiz: Final quiz, Advanced Course
