@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <h2>Share Transactions History</h2>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-start">Transaction Date & Time</th>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-start">Name</th>
+                    <th class="text-start">Type</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in history_data %}
+                <tr>
+                    <td class="text-start">{{ transaction.transaction_date }}</td>
+                    <td class="text-start">{{ transaction.stock_symbol }}</td>
+                    <td class="text-start">{{ transaction.stock_name }}</td>
+                    <td class="text-start">{{ transaction.type }}</td>
+                    <td class="text-end">{{ transaction.num_shares }}</td>
+                    <td class="text-end">{{ transaction.stock_price | usd }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <h2>Deposits & Withdrawals History</h2>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-start">Transaction Date & Time</th>
+                    <th class="text-start">Type</th>
+                    <th class="text-end">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in cash_data %}
+                <tr>
+                    <td class="text-start">{{ transaction.transaction_date }}</td>
+                    <td class="text-start">{{ transaction.type }}</td>
+                    <td class="text-end">{{ transaction.amount | usd }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+{% endblock %}
+<!-- Reference - C$50 finance. Available at: https://finance.cs50.net/ (Accessed: January 4, 2023). -->

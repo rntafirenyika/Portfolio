@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <h2>Portfolio</h2>
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-start">Name</th>
+                    <th class="text-end">Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks_data %}
+                <tr>
+                    <td class="text-start">{{ stock.stock_symbol }}</td>
+                    <td class="text-start">{{ stock.stock_name }}</td>
+                    <td class="text-end">{{ stock.num_shares }}</td>
+                    <td class="text-end">{{ stock.current_price | usd }}</td>
+                    <td class="text-end">{{ stock.total | usd }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                    <td class="border-0 text-end">{{ cash | usd }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                    <td class="border-0 w-bold text-end">{{ portfolio_value | usd }}</td>
+                </tr>
+        </table>
+    </main>
+
+{% endblock %}
+<!-- Reference - C$50 finance. Available at: https://finance.cs50.net/ (Accessed: January 4, 2023). -->

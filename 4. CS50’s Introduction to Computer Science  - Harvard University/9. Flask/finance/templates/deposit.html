@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <h2>Deposit Cash</h2>
+        <br>
+        <form action="/deposit" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="deposit" placeholder="Deposit Amount" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Deposit</button>
+        </form>
+    </main>
+{% endblock %}
+<!-- Reference - C$50 finance. Available at: https://finance.cs50.net/ (Accessed: January 4, 2023). -->

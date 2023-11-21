@@ -1,0 +1,3 @@
+The 3 averages (valence, energy and danceability) gives us 3 likely combinations from any 2 averages. The 3 combinations can then either fall into a positive or negative spectrum hence giving us a total of six likely outcomes which l then categorise into the six mood descriptor categories. For example a high reading of energy and valence will probably fall in the Orange mood.
+
+The way l have calculated this aura might not be very representative of the listener because some of the songs in this list would have been played more than others hence not factoring this will not give us a more accurate representation. A better way is to add weights to each song's averages before aggregating the averages.

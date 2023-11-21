@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <h2>Get a Quote</h2>
+        <br>
+        <form action="/quote" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text" >
+            </div>
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </form>
+    </main>
+{% endblock %}
+<!-- Reference - C$50 finance. Available at: https://finance.cs50.net/ (Accessed: January 4, 2023). -->

@@ -1,0 +1,76 @@
+.footer-bs{
+    color: gold;
+}
+
+h2 {
+    display: block;
+    color: gold;
+    padding: 30px 30px 20px 30px;
+}
+
+.clearfix, .equipment {
+    padding: 10px 30px 10px 30px;
+}
+
+iframe, form {
+    padding: 0px 30px 0px 30px;
+}
+
+label {
+    font-size: 25px;
+    float: left;
+    padding-left: 30px;
+    padding-bottom: 30px
+}
+
+.col-sm {
+    padding-bottom: 30px
+}
+
+h3 {
+    font-size: 40px;
+    color: gold;
+    padding: 30px 30px 20px 30px;
+    text-align: center
+}
+
+#bees1, #products {
+    max-height: 500px;
+    max-width: 333px;
+    text-align: center;
+    margin: auto;
+}
+
+#bees2, #bees3 {
+    max-height: 333px;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.row {
+    padding: 30px 0px 20px 0px;
+}
+
+#successmsg {
+    color: green;
+}
+
+.paragraph {
+    padding: 0px 30px 0px 30px;
+}
+
+#cash {
+    max-height: 500px;
+    max-width: 333px;
+    text-align: center;
+    margin: auto;
+}
+
+h5 {
+    color: gold;
+}
+
+.col {
+    padding: 0px 5px 10px 5px;
+}

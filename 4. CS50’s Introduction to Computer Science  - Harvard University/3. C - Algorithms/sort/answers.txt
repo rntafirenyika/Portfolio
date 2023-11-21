@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Given sorted items, it performed better that sort3 implying Ω(n).
+
+sort2 uses: Merge Sort
+
+How do you know?: Performed quicker in all cases than the other sorts implying O(n log n) and Ω(n log n). Plotting the graphs also confirms the slope is less steeper in all cases than the other sorts.
+
+sort3 uses: Selection Sort
+
+How do you know?: Performed worse that sort1 on sorted items implying that it must have a Ω(n²).

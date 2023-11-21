@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Code to check answers to questions.
+            document.addEventListener('DOMContentLoaded', function() {
+                // Check answer entered for part 1 question.
+                document.querySelectorAll('#btn1').forEach(function(btn1) {
+                    btn1.onclick = function() {
+                        document.querySelectorAll('#btn1').forEach(function(btn1) {btn1.style.backgroundColor = "#d9edff";}); // Reset button formatting once user select another answer.
+                        btn1.style.backgroundColor = btn1.dataset.color;
+                        if (btn1.dataset.color === 'green') {document.querySelector('#q1check').innerHTML = "Correct!"}
+                        else {document.querySelector('#q1check').innerHTML = "Incorrect"}
+                    }
+                });
+
+                // Clear previous answer formatting once the user starts changing the answer.
+                document.querySelector('#q2answer').onkeyup = function() {
+                    document.querySelector('#q2answer').style.color = 'black';
+                    document.querySelector('#q2check').innerHTML = "";
+                };
+
+                // Check answer entered for part 2 question.
+                document.querySelector('#q2button').onclick = function() {
+                    const answer = document.querySelector('#q2answer').value.toLowerCase();
+                    if (answer === 'argentina') {document.querySelector('#q2answer').style.color = 'green', document.querySelector('#q2check').innerHTML = "Correct!"}
+                    else {document.querySelector('#q2answer').style.color = 'red', document.querySelector('#q2check').innerHTML = "Incorrect"}
+                };
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <!-- multiple choice question 1 -->
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which country hosted the 2022 soccer world cup?</h3>
+                <button data-color="red" type="button" id="btn1">United Arab Emirates</button>
+                <button data-color="red" type="button" id="btn1">Saudi Arabia</button>
+                <button data-color="green" type="button" id="btn1">Qatar</button>
+                <button data-color="red" type="button" id="btn1">Oman</button>
+                <h3 id="q1check"></h3>
+            </div>
+
+            <div class="section">
+                <!-- free response question -->
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which country won the 2022 men's soccer world cup?</h3>
+                <form>
+                    <input id="q2answer" type="text">
+                    <button id="q2button" type="button">Check Answer</button>
+                </form>
+                <h3 id="q2check"></h3>
+            </div>
+        </div>
+    </body>
+</html>
