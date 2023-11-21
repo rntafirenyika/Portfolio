@@ -1,0 +1,14 @@
+cs50
+Flask
+Flask-Session
+requests
+python-docx
+PyPDF2
+opencv-python
+pytesseract
+xlrd
+cryptography
+flask-paginate
+urllib3==1.26.7
+python-dateutil
+pandas

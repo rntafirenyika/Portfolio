@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add a new User
+{% endblock %}
+
+{% block main %}
+
+    <form action="/useradd" method="post" class="row g-3">
+        <h2>User Details</h2>
+        <br>
+        <h4>Personal Details</h4>
+
+        <div class="col-sm-2">
+            <label for="title" class="form-label">Title</label>
+            <select id="title" class="form-select" name="title" required>
+            <option disabled selected>Choose...</option>
+            {% for title in titles %}
+                <option value="{{ title.title_id }}">{{ title.title }}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-5">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" aria-label="firstname" id="firstname" name="firstname" required>
+        </div>
+        <div class="col-md-5">
+            <label for="surname" class="form-label">Surname</label>
+            <input type="text" class="form-control" aria-label="surname" id="surname" name="surname" required>
+        </div>
+        <div class="col-md-3">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" aria-label="dob" id="dob" name="dob">
+        </div>
+        <div class="col-md-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select id="gender" class="form-select" name="gender" required>
+            <option disabled selected>Choose...</option>
+            {% for gender in genders %}
+                <option value="{{ gender.gender_id }}">{{ gender.gender }}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <label for="activity" class="form-label">Active/Inactive</label>
+            <select id="activity" class="form-select" name="activity" required>
+            <option disabled selected>Choose...</option>
+            {% for state in status %}
+                <option value="{{ state.activity_id }}">{{ state.activity_status }}</option>
+            {% endfor %}
+            </select>
+        </div>
+
+        <hr/>
+
+        <br>
+        <h4>Contact Details</h4>
+        <div class="col-md-6">
+            <label for="cellnumber" class="form-label">Cell Number</label>
+            <input type="text" class="form-control" aria-label="cellnumber" id="cellnumber" name="cellnumber">
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+
+        <hr/>
+
+        <br>
+        <h4>Physical/Residential Address</h4>
+
+        <div class="col-sm-3">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" class="form-select" name="country" required>
+            <option disabled selected>Choose...</option>
+            {% for country in countries %}
+                <option value="{{ country.country_id }}">{{ country.country_name }}</option>
+            {% endfor %}
+            </select>
+        </div>
+
+        <hr/>
+
+        <br>
+        <h4>System Access</h4>
+        <div class="col-sm-4">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" aria-label="username" id="username" name="username">
+        </div>
+
+        <div class="col-sm-4">
+            <label for="userrole" class="form-label">User Role</label>
+            <select id="userrole" class="form-select" name="userrole" required>
+            <option disabled selected>Choose...</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+            </select>
+        </div>
+
+        <div class="col-sm-4">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" aria-label="password" id="password" name="password">
+        </div>
+
+        <hr/>
+
+        <h4>Additional Information</h4>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Additional information" id="notes" name="notes" style="height: 100px"></textarea>
+            <label for="notes">Notes/Comments</label>
+        </div>
+        <br>
+        <hr/>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h2>Sent Emails History</h2>
+    <br>
+    <div class="table-responsive text-nowrap">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th class="text-start">Date & Time</th>
+                    <th class="text-start">Email</th>
+                    <th class="text-start">Category</th>
+                    <th class="text-end">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in history_data %}
+                <tr>
+                    <td class="text-start">{{ data.date }}</td>
+                    <td class="text-start">{{ data.email }}</td>
+                    <td class="text-start">{{ data.category }}</td>
+                    <td class="text-end">{{ data.country }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+
+    <div>
+        <ul class="pagination justify-content-center pagination-sm">
+            {% if current_page > 1 %}
+                <li class="page-item"><a class="page-link" href="{{ url_for('history', page=1) }}">First</a></li>
+            {% endif %}
+
+            {% if start_page > 1 %}
+                <li class="page-item"><a class="page-link" href="{{ url_for('history', page=start_page - visible_pages) }}">...</a></li>
+            {% endif %}
+
+            {% for page_num in range(start_page, end_page + 1) %}
+                {% if current_page == page_num %}
+                    <li class="page-item active"><span class="page-link">{{ page_num }}</span></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="{{ url_for('history', page=page_num) }}">{{ page_num }}</a></li>
+                {% endif %}
+            {% endfor %}
+
+            {% if end_page < num_pages %}
+                <li class="page-item"><a class="page-link" href="{{ url_for('history', page=end_page + 1, more='true') }}">...</a></li>
+            {% endif %}
+
+            {% if current_page < num_pages %}
+                <li class="page-item"><a class="page-link" href="{{ url_for('history', page=num_pages) }}">Last</a></li>
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}

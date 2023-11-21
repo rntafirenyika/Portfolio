@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h2>Send to local database emails.</h2>
+    <br>
+    <form action="/edb" method="post" enctype="multipart/form-data" class="row g-3">
+        <div class="col-sm-6">
+            <label for="category" class="form-label">Category</label>
+            <select id="category" class="form-select custom-select" style="width: 100%" onchange="handleSelectChange(this)" name="category" required>
+            <option disabled selected>Choose...</option>
+            {% for category in categories %}
+                <option value="{{ category.category_id }}">{{ category.category }}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div class="col-sm-6" style="text-align:left;">
+            <label for="country" class="form-label">Target Country</label>
+            <select id="country" class="form-select custom-select" style="width: 100%" onchange="handleSelectChange(this)" name="country" required>
+            <option disabled selected>Choose...</option>
+            {% for country in countries %}
+                <option value="{{ country.country_id }}">{{ country.country_name }}</option>
+            {% endfor %}
+            </select>
+        </div>
+
+        <br>
+
+        <div class="col-sm-6">
+            <label for="file" class="form-label">CV (Required)</label>
+            <input class="form-control form-control-sm" id="file" name="file" type="file" required>
+        </div>
+        <div class="col-sm-6">
+            <label for="file1" class="form-label">Coverletter (Optional)</label>
+            <input class="form-control form-control-sm" id="file1" name="file1" type="file">
+        </div>
+
+        <br>
+
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" aria-label="subject" id="subject" name="subject" required>
+        </div>
+        <br>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Your message" id="message" name="message" style="height: 200px" required></textarea>
+            <label for="message" >Message</label>
+        </div>
+        <input type="hidden" name="localTime" id="localTimeInput">
+        <br>
+
+        <hr/>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit" value="Upload">Send</button>
+        </div>
+    </form>
+    <script>
+        // JavaScript code to populate the localTimeInput field with the local time value
+        var currentTime = new Date();
+        var options = { timeZoneName: 'short' };
+        var localTime = currentTime.toLocaleString(undefined, options);
+
+
+        document.getElementById("localTimeInput").value = localTime;
+    </script>
+{% endblock %}

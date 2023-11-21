@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <h2>Invoice List</h2>
+        <br>
+        <form action="/history" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="invoicelist" placeholder="Member" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Refresh</button>
+        </form>
+    </main>
+{% endblock %}

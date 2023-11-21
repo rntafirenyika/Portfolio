@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="container">
+        <div class="section">
+
+            <h2>Add an Access Key</h2>
+            <form action="/config" method="post" class="text-center">
+                <input name="akey" placeholder="Key" required type="password" class="form-control mx-auto w-auto my-2">
+                <input type="hidden" name="localTime" id="localTimeInput">
+                <button type="submit">Add Key</button>
+            </form>
+        </div>
+        <br>
+        <div class="section">
+
+            <h2>Available Key</h2>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for datum in data %}
+                        <tr>
+                            <td>Key1</td>
+                            <td>{{ datum.datekey }}</td>
+                            <td>
+                                <form action="/removek" method="post">
+                                    <input type="submit" value="Remove">
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br>
+    <p>To get your app password, follow the steps on this link: <a href="https://support.google.com/accounts/answer/185833?hl=en" target="_blank">https://support.google.com/accounts/answer/185833?hl=en</a></p>
+    <br>
+    <script>
+        // JavaScript code to populate the localTimeInput field with the local time value
+        var currentTime = new Date();
+        var options = { timeZoneName: 'short' };
+        var localTime = currentTime.toLocaleString(undefined, options);
+
+
+        document.getElementById("localTimeInput").value = localTime;
+    </script>
+{% endblock %}

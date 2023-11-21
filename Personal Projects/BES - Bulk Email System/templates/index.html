@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h2>Dashboard</h2>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="/edb" class="tile">Send to database emails.</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/efile" class="tile">Send to file upload emails.</a>
+            </div>
+            <div class="col-sm-4">
+                <a href="/history" class="tile">History of emails sent.</a>
+            </div>
+        </div>
+    </div>
+    <br>
+
+{% endblock %}
