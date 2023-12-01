@@ -33,4 +33,5 @@ while numberOfMessages != 0:
     hour = random.randrange(startingHour, endingHour)
     minute = random.randrange(0, 60)
     numberOfMessages -= 1
+    print(f'{hour}:{minute}')
     send_whatsapp_message(phoneNumber, theMessage, hour, minute)
