@@ -1,3 +1,6 @@
+"""
+App to notify when the reqiured lots on Auction Nation South Africa are close to being auctioned.
+"""
 import requests
 from bs4 import BeautifulSoup
 import time
@@ -17,15 +20,17 @@ def main():
     global myTwilioNumber
     global myCellPhone
 
-    link = 'https://www.auctionnation.co.za/Auctions/Live/384282'
-    lots = [84, 162, 193]
+    #Enter link for the auction e.g 'https://www.auctionnation.co.za/Auctions/Live/397716'.
+    link = 'https://www.auctionnation.co.za/Auctions/Live/397716'
+    #Enter list of required lot numbers.
+    lots = [162, 193]
     
-    #Twilio account details
-    #accountSID = 'ACa8b139aa484cf8ce25246d1afe1d44bc'
-    #authToken  = '43daad15f6a319b1f5275b95acdc8e2e'
+    #Twilio account details - for receiving sms
+    #accountSID = 'your accountSID details goes here'
+    #authToken  = 'your authToken details goes here'
     #twilioCli = Client(accountSID, authToken)
-    #myTwilioNumber = '+18585443572'
-    #myCellPhone = '+27682491419'
+    #myTwilioNumber = 'your Twilio Number goes here'
+    #myCellPhone = 'your Cell Phone goes here'
 
     while True:
         time_stamp = time.time()

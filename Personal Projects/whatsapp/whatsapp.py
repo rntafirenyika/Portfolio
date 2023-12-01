@@ -18,12 +18,11 @@ def send_whatsapp_message(phoneNumber, msg, hour, minute):
     except Exception as e:
         print(str(e))
 
-theMessage = random.choice(['Hesi baby...',
-             'Wati toita sei...',
-             emoji.emojize('I love you :sparkling_heart:'),
-             emoji.emojize(':red_heart:', variant='emoji_type'),
-             emoji.emojize(':beating_heart:'),
-             emoji.emojize(':smiling_face_with_heart-eyes:')])
+theMessage = random.choice(['Good Day, Your account is now overdue.',
+             'Your account is now overdue, please pay urgently.',
+             emoji.emojize('Your account is overdue, please pay to avoid suspension.'),
+             emoji.emojize('Your account is overdue and may be blocked, please make payment.')
+             ])
 
 phoneNumber = input('What number would you like to text? number must include the country calling code  ')
 numberOfMessages = int(input('How many times would you like to send a message?  '))
